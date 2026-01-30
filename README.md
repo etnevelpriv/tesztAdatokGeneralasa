@@ -6,7 +6,6 @@ Ezért most generáljunk teszt adatokat magunknak!
 
 Kövesd a feladat lépéseit! 
 Készíts egy vite-es projektet, "vérnyomások" néven. 
-Tedd git alá
 Készíts egy konzolos scriptet, general.js néven. A feladata, hogy a public mappában létrehozzon egy test.js fájt. A scriptben:
 Vegyél fel egy üres tömböt
 Töltsd fel objektumokal. Minden objektumnak legyen egy név és egy vérnyomás adattagja, amit véletlenszerűen határozz meg. A név generálásához párosíts gyakori magyar vezeték- és keresztneveket.
