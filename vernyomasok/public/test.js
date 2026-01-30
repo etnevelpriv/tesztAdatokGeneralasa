@@ -1,3 +1,4 @@
+
 import fs from 'node:fs';
 
 const randomNevGeneralas = function () {
@@ -33,8 +34,8 @@ const randomNevGeneralas = function () {
         'Dotsó', 'Dováry', 'Dövecz', 'Dövecsényi', 'Dövecskes', 'Dövecz-Nagy', 'Dovácz', 'Döves'
     ];
 
-    const vezeteknev = Math.floor(Math.random() * vezeteknekvek.length) + 1;
-    const keresztnev = Math.floor(Math.random() * keresztnevek.length) + 1;
+    const vezeteknev = vezeteknekvek[Math.floor(Math.random() * vezeteknekvek.length) + 1];
+    const keresztnev = keresztnevek[Math.floor(Math.random() * keresztnevek.length) + 1];
 
     return (`${vezeteknev} ${keresztnev}`);
 };
@@ -54,6 +55,7 @@ const arrayGeneralas = function () {
         };
         arr.push(obj);
     };
+    console.log(arr)
 };
 
 const arrayMenteseJSONFormatumban = function () {
