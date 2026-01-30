@@ -2,7 +2,7 @@ import fs from 'node:fs';
 
 const generateJsFile = function () {
     const content = `
-console.log('teszt');
+const arr = [];
 `
     fs.writeFileSync('./vernyomasok/public/test.js', content);
     console.log('lefutott')
