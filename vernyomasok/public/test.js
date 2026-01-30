@@ -1,5 +1,7 @@
 
+
 import fs from 'node:fs';
+import { json } from 'node:stream/consumers';
 
 const randomNevGeneralas = function () {
     // AI-al generaltattam a tomboket
@@ -41,8 +43,8 @@ const randomNevGeneralas = function () {
 };
 
 const randomVernyomasGeneralas = function () {
-    const vernyomasELsoSzam = Math.floor(Math.random() * 180) + 80;
-    const vernyomasMasodikSzam = Math.floor(Math.random() * 120) + 50;
+    const vernyomasELsoSzam = Math.floor(Math.random() * 100) + 80;
+    const vernyomasMasodikSzam = Math.floor(Math.random() * 70) + 50;
     return (`${vernyomasELsoSzam}/${vernyomasMasodikSzam}`);
 };
 
@@ -56,10 +58,12 @@ const arrayGeneralas = function () {
         arr.push(obj);
     };
     console.log(arr)
+    arrayMenteseJSONFormatumban(arr);
 };
 
-const arrayMenteseJSONFormatumban = function () {
-
+const arrayMenteseJSONFormatumban = function (arr) {
+    fs.writeFileSync('./vernyomasok/public/test.json', JSON.stringify(arr));
 };
 
 arrayGeneralas();
+
