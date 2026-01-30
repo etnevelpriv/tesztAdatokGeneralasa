@@ -1,4 +1,4 @@
-import './style.css';
+import '../src/style.css';
 
 const fetchVernyomasok = async function () {
     try {
@@ -15,10 +15,12 @@ const fetchVernyomasok = async function () {
 
 const displayDataTable = function (arr) {
     const table = document.createElement('table');
-    table.classList.add('table');
+    table.classList.add('table', 'table-dark', 'table-striped');
     document.body.appendChild(table);
+    const thead = document.createElement('thead');
+    table.appendChild(thead);
     const headerTr = document.createElement('tr');
-    table.appendChild(headerTr);
+    thead.appendChild(headerTr);
     const th1 = document.createElement('th');
     th1.textContent = 'Név';
     headerTr.appendChild(th1);
@@ -26,9 +28,12 @@ const displayDataTable = function (arr) {
     th2.textContent = 'Vérnyomás';
     headerTr.appendChild(th2);
 
+    const tbody = document.createElement('tbody');
+    table.appendChild(tbody);
+
     arr.forEach(element => {
         const tr = document.createElement('tr');
-        table.appendChild(tr);
+        tbody.appendChild(tr);
         const td1 = document.createElement('td');
         td1.textContent = element.nev;
         tr.appendChild(td1);
